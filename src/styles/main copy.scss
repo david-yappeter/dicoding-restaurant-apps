@@ -1,0 +1,104 @@
+/* Josefins Sans */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// global
+// :root {
+//   --primary: #000000;
+// }
+$primary: #000000;
+
+// Skip to Content
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  z-index: 10;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title,
+.subtitle {
+  font-family: 'Josefins Sans','Segoe UI','Tahoma','Geneva','Verdana','sans-serif';
+  color: $primary;
+}
+
+p,
+span,
+input,
+button,
+.body1 {
+  font-family: 'Poppins', 'Courier New', 'Courier', 'monospace';
+  color: $primary;
+}
+
+// header
+header {
+
+}
+
+// main content
+
+// footer
+footer
+
+img {
+  display: block;
+}
+
+// To generate style in several view port
+// $viewports: ("": "0px", "sm": "640px", "md": "768px", "lg": "1024px", "xl": "1280px", "xl2": "1536px");
+
+// @each $vp, $minW in $viewports {
+//   @media (min-width: $minW) {
+//     .#{$vp}\:{
+//       &m-10px {
+//         margin: 10px;
+//       }
+
+//       &mx-10px {
+//         margin-left: 10px;
+//         margin-right: 10px;
+//       }
+//     }
+//   }
+// }
+
+// $viewports: ("": "0px", "sm": "640px", "md": "768px", "lg": "1024px", "xl": "1280px", "xl2": "1536px");
+
+// @each $vp, $minW in $viewports {
+//   @media (min-width: $minW) {
+//     .#{$vp}\:{
+//       &m-10px {
+//         margin: 10px;
+//       }
+
+//       &mx-10px {
+//         margin-left: 10px;
+//         margin-right: 10px;
+//       }
+//     }
+//   }
+// }
+
+
+// // sm
+// @media (min-width: 640px) {
+// }
+// .sm\:{
+//   &mx-10px {
+//     margin: 10px;
+//   }
+// }  
+

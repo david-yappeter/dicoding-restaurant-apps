@@ -1,62 +1,699 @@
+!
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
-    <title>Restaurant Apps Starter Project</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wello</title>
   </head>
-  <body>
-    <!-- start::Header -->
+  <body data-new-gr-c-s-check-loaded="14.1097.0" data-gr-ext-installed="">
+    <a class="skip" href="#content">Skip To Content</a>
     <header>
-      <!-- start::logo -->
-      <div></div>
-      <!-- end::logo -->
-
-      <!-- start::Navigation -->
-      <nav class="navbar-container">
-        <ul class="navbar-list">
-          <li class="navbar-item">
-            <a class="navbar-link" href="/"> Home </a>
-          </li>
-          <li class="navbar-item">
-            <a class="navbar-link" href="#"> Favorite </a>
-          </li>
-          <li class="navbar-item">
-            <a class="navbar-link" href="https://github.com/david-yappeter">
-              About Us
-            </a>
+      <nav class="desktop">
+        <h1 class="logo"><a href="/#">Wello</a></h1>
+        <button class="drawer" aria-label="button drawer">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            fill="currentColor"
+            class="bi bi-list"
+            viewBox="0 0 16 16">
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+          </svg>
+        </button>
+        <ul class="nav__list open">
+          <li><a href="/#">Home</a></li>
+          <li><a href="#/fav">Favorites</a></li>
+          <li>
+            <a
+              href="https://twitter.com/nnivxix"
+              target="_blank"
+              rel="noreferrer"
+              >About Us</a
+            >
           </li>
         </ul>
       </nav>
-      <!-- end::Navigation -->
     </header>
-    <!-- end::Header -->
+    <main id="content">
+      <hero-header>
+        <main class="hero" id="hero">
+          <h1 tabindex="0">Welcome to Wello</h1>
+          <!-- <h2 tabindex="0">Ready to Explore the Food Restaurant?</h2> -->
+          <a href="#trending">Explore</a>
+        </main>
+      </hero-header>
+      <section class="catalogs">
+        <h1 tabindex="0" id="trending" class="cap__trend">
+          Explore Nearby Restaurants
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-graph-up"
+            viewBox="0 0 16 16">
+            <path
+              fill-rule="evenodd"
+              d="M0 0h1v15h15v1H0V0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5z"></path>
+          </svg>
+        </h1>
 
-    <!-- start::Main -->
-    <main>
-      <!-- start::MainBackgroundImage -->
-      <div></div>
-      <!-- end::MainBackgroundImage -->
+        <figure tabindex="0" class="card">
+          <picture>
+            <source
+              class="lazyloaded"
+              media="(max-width: 600px)"
+              srcset="https://restaurant-api.dicoding.dev/images/medium/14" />
+            <img
+              class="img_card ls-is-cached lazyloaded"
+              data-src="https://restaurant-api.dicoding.dev/images/large/14"
+              alt="Melting Pot"
+              src="https://restaurant-api.dicoding.dev/images/large/14" />
+          </picture>
 
-      <!-- start::ExploreRestaurant -->
-      <div>
-        <div>
-          <h2>Explore Restaurant</h2>
-        </div>
-        <div id="restaurant-list">
-          <!-- generated -->
-        </div>
-      </div>
-      <!-- end::ExploreRestaurant -->
+          <figcaption class="caption">
+            <h1>
+              <a class="cta__restaurant" href="/#/detail/rqdv5juczeskfw1e867"
+                >Melting Pot</a
+              >
+            </h1>
+            <ul class="detail__card">
+              <li class="rate"><i class="star bi bi-star-fill"></i> 4.2</li>
+              <li class="city"><i class="geo bi bi-geo-alt-fill"></i> Medan</li>
+            </ul>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aene...
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure tabindex="0" class="card">
+          <picture>
+            <source
+              class="lazyloaded"
+              media="(max-width: 600px)"
+              srcset="https://restaurant-api.dicoding.dev/images/medium/25" />
+            <img
+              class="img_card ls-is-cached lazyloaded"
+              data-src="https://restaurant-api.dicoding.dev/images/large/25"
+              alt="Kafe Kita"
+              src="https://restaurant-api.dicoding.dev/images/large/25" />
+          </picture>
+
+          <figcaption class="caption">
+            <h1>
+              <a class="cta__restaurant" href="/#/detail/s1knt6za9kkfw1e867"
+                >Kafe Kita</a
+              >
+            </h1>
+            <ul class="detail__card">
+              <li class="rate"><i class="star bi bi-star-fill"></i> 4</li>
+              <li class="city">
+                <i class="geo bi bi-geo-alt-fill"></i> Gorontalo
+              </li>
+            </ul>
+            <p class="desc">
+              Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+              Curabitur ullamcorper ultricie...
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure tabindex="0" class="card">
+          <picture>
+            <source
+              class="lazyloaded"
+              media="(max-width: 600px)"
+              srcset="https://restaurant-api.dicoding.dev/images/medium/03" />
+            <img
+              class="img_card ls-is-cached lazyloaded"
+              data-src="https://restaurant-api.dicoding.dev/images/large/03"
+              alt="Bring Your Phone Cafe"
+              src="https://restaurant-api.dicoding.dev/images/large/03" />
+          </picture>
+
+          <figcaption class="caption">
+            <h1>
+              <a class="cta__restaurant" href="/#/detail/w9pga3s2tubkfw1e867"
+                >Bring Your Phone Cafe</a
+              >
+            </h1>
+            <ul class="detail__card">
+              <li class="rate"><i class="star bi bi-star-fill"></i> 4.2</li>
+              <li class="city">
+                <i class="geo bi bi-geo-alt-fill"></i> Surabaya
+              </li>
+            </ul>
+            <p class="desc">
+              Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+              Curabitur ullamcorper ultricie...
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure tabindex="0" class="card">
+          <picture>
+            <source
+              class="lazyloaded"
+              media="(max-width: 600px)"
+              srcset="https://restaurant-api.dicoding.dev/images/medium/15" />
+            <img
+              class="img_card lazyloaded"
+              data-src="https://restaurant-api.dicoding.dev/images/large/15"
+              alt="Kafein"
+              src="https://restaurant-api.dicoding.dev/images/large/15" />
+          </picture>
+
+          <figcaption class="caption">
+            <h1>
+              <a class="cta__restaurant" href="/#/detail/uewq1zg2zlskfw1e867"
+                >Kafein</a
+              >
+            </h1>
+            <ul class="detail__card">
+              <li class="rate"><i class="star bi bi-star-fill"></i> 4.6</li>
+              <li class="city"><i class="geo bi bi-geo-alt-fill"></i> Aceh</li>
+            </ul>
+            <p class="desc">
+              Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+              Curabitur ullamcorper ultricie...
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure tabindex="0" class="card">
+          <picture>
+            <source
+              class="lazyloaded"
+              media="(max-width: 600px)"
+              srcset="https://restaurant-api.dicoding.dev/images/medium/05" />
+            <img
+              class="img_card lazyloaded"
+              data-src="https://restaurant-api.dicoding.dev/images/large/05"
+              alt="Istana Emas"
+              src="https://restaurant-api.dicoding.dev/images/large/05" />
+          </picture>
+
+          <figcaption class="caption">
+            <h1>
+              <a class="cta__restaurant" href="/#/detail/ygewwl55ktckfw1e867"
+                >Istana Emas</a
+              >
+            </h1>
+            <ul class="detail__card">
+              <li class="rate"><i class="star bi bi-star-fill"></i> 4.5</li>
+              <li class="city">
+                <i class="geo bi bi-geo-alt-fill"></i> Balikpapan
+              </li>
+            </ul>
+            <p class="desc">
+              Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+              Curabitur ullamcorper ultricie...
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure tabindex="0" class="card">
+          <picture>
+            <source
+              class="lazyloaded"
+              media="(max-width: 600px)"
+              srcset="https://restaurant-api.dicoding.dev/images/medium/22" />
+            <img
+              class="img_card lazyloaded"
+              data-src="https://restaurant-api.dicoding.dev/images/large/22"
+              alt="Makan mudah"
+              src="https://restaurant-api.dicoding.dev/images/large/22" />
+          </picture>
+
+          <figcaption class="caption">
+            <h1>
+              <a class="cta__restaurant" href="/#/detail/fnfn8mytkpmkfw1e867"
+                >Makan mudah</a
+              >
+            </h1>
+            <ul class="detail__card">
+              <li class="rate"><i class="star bi bi-star-fill"></i> 3.7</li>
+              <li class="city"><i class="geo bi bi-geo-alt-fill"></i> Medan</li>
+            </ul>
+            <p class="desc">
+              But I must explain to you how all this mistaken idea of denouncing
+              pleasure and praising pain wa...
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure tabindex="0" class="card">
+          <picture>
+            <source
+              class="lazyloaded"
+              media="(max-width: 600px)"
+              srcset="https://restaurant-api.dicoding.dev/images/medium/18" />
+            <img
+              class="img_card lazyloaded"
+              data-src="https://restaurant-api.dicoding.dev/images/large/18"
+              alt="Drinky Squash"
+              src="https://restaurant-api.dicoding.dev/images/large/18" />
+          </picture>
+
+          <figcaption class="caption">
+            <h1>
+              <a class="cta__restaurant" href="/#/detail/dwg2wt3is19kfw1e867"
+                >Drinky Squash</a
+              >
+            </h1>
+            <ul class="detail__card">
+              <li class="rate"><i class="star bi bi-star-fill"></i> 3.9</li>
+              <li class="city">
+                <i class="geo bi bi-geo-alt-fill"></i> Surabaya
+              </li>
+            </ul>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aene...
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure tabindex="0" class="card">
+          <picture>
+            <source
+              class="lazyloaded"
+              media="(max-width: 600px)"
+              srcset="https://restaurant-api.dicoding.dev/images/medium/35" />
+            <img
+              class="img_card lazyloaded"
+              data-src="https://restaurant-api.dicoding.dev/images/large/35"
+              alt="Ampiran Kota"
+              src="https://restaurant-api.dicoding.dev/images/large/35" />
+          </picture>
+
+          <figcaption class="caption">
+            <h1>
+              <a class="cta__restaurant" href="/#/detail/6u9lf7okjh9kfw1e867"
+                >Ampiran Kota</a
+              >
+            </h1>
+            <ul class="detail__card">
+              <li class="rate"><i class="star bi bi-star-fill"></i> 4.1</li>
+              <li class="city">
+                <i class="geo bi bi-geo-alt-fill"></i> Balikpapan
+              </li>
+            </ul>
+            <p class="desc">
+              Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+              Curabitur ullamcorper ultricie...
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure tabindex="0" class="card">
+          <picture>
+            <source
+              class="lazyloaded"
+              media="(max-width: 600px)"
+              srcset="https://restaurant-api.dicoding.dev/images/medium/38" />
+            <img
+              class="img_card lazyloaded"
+              data-src="https://restaurant-api.dicoding.dev/images/large/38"
+              alt="Gigitan Cepat"
+              src="https://restaurant-api.dicoding.dev/images/large/38" />
+          </picture>
+
+          <figcaption class="caption">
+            <h1>
+              <a class="cta__restaurant" href="/#/detail/zvf11c0sukfw1e867"
+                >Gigitan Cepat</a
+              >
+            </h1>
+            <ul class="detail__card">
+              <li class="rate"><i class="star bi bi-star-fill"></i> 4</li>
+              <li class="city"><i class="geo bi bi-geo-alt-fill"></i> Bali</li>
+            </ul>
+            <p class="desc">
+              Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+              Curabitur ullamcorper ultricie...
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure tabindex="0" class="card">
+          <picture>
+            <source
+              class="lazyloaded"
+              media="(max-width: 600px)"
+              srcset="https://restaurant-api.dicoding.dev/images/medium/10" />
+            <img
+              class="img_card lazyloaded"
+              data-src="https://restaurant-api.dicoding.dev/images/large/10"
+              alt="Tempat Siang Hari"
+              src="https://restaurant-api.dicoding.dev/images/large/10" />
+          </picture>
+
+          <figcaption class="caption">
+            <h1>
+              <a class="cta__restaurant" href="/#/detail/ughslf146iqkfw1e867"
+                >Tempat Siang Hari</a
+              >
+            </h1>
+            <ul class="detail__card">
+              <li class="rate"><i class="star bi bi-star-fill"></i> 4.4</li>
+              <li class="city">
+                <i class="geo bi bi-geo-alt-fill"></i> Surabaya
+              </li>
+            </ul>
+            <p class="desc">
+              But I must explain to you how all this mistaken idea of denouncing
+              pleasure and praising pain wa...
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure tabindex="0" class="card">
+          <picture>
+            <source
+              class="lazyloaded"
+              media="(max-width: 600px)"
+              srcset="https://restaurant-api.dicoding.dev/images/medium/24" />
+            <img
+              class="img_card lazyloaded"
+              data-src="https://restaurant-api.dicoding.dev/images/large/24"
+              alt="Fairy Cafe"
+              src="https://restaurant-api.dicoding.dev/images/large/24" />
+          </picture>
+
+          <figcaption class="caption">
+            <h1>
+              <a class="cta__restaurant" href="/#/detail/w7jca3irwykfw1e867"
+                >Fairy Cafe</a
+              >
+            </h1>
+            <ul class="detail__card">
+              <li class="rate"><i class="star bi bi-star-fill"></i> 5</li>
+              <li class="city">
+                <i class="geo bi bi-geo-alt-fill"></i> Surabaya
+              </li>
+            </ul>
+            <p class="desc">
+              Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+              Curabitur ullamcorper ultricie...
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure tabindex="0" class="card">
+          <picture>
+            <source
+              class="lazyloaded"
+              media="(max-width: 600px)"
+              srcset="https://restaurant-api.dicoding.dev/images/medium/23" />
+            <img
+              class="img_card lazyloaded"
+              data-src="https://restaurant-api.dicoding.dev/images/large/23"
+              alt="Rumah Senja"
+              src="https://restaurant-api.dicoding.dev/images/large/23" />
+          </picture>
+
+          <figcaption class="caption">
+            <h1>
+              <a class="cta__restaurant" href="/#/detail/8maika7giinkfw1e867"
+                >Rumah Senja</a
+              >
+            </h1>
+            <ul class="detail__card">
+              <li class="rate"><i class="star bi bi-star-fill"></i> 3.9</li>
+              <li class="city">
+                <i class="geo bi bi-geo-alt-fill"></i> Bandung
+              </li>
+            </ul>
+            <p class="desc">
+              Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+              Curabitur ullamcorper ultricie...
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure tabindex="0" class="card">
+          <picture>
+            <source
+              class="lazyloaded"
+              media="(max-width: 600px)"
+              srcset="https://restaurant-api.dicoding.dev/images/medium/34" />
+            <img
+              class="img_card lazyloaded"
+              data-src="https://restaurant-api.dicoding.dev/images/large/34"
+              alt="Saya Suka"
+              src="https://restaurant-api.dicoding.dev/images/large/34" />
+          </picture>
+
+          <figcaption class="caption">
+            <h1>
+              <a class="cta__restaurant" href="/#/detail/e1elb86snf8kfw1e867"
+                >Saya Suka</a
+              >
+            </h1>
+            <ul class="detail__card">
+              <li class="rate"><i class="star bi bi-star-fill"></i> 4.3</li>
+              <li class="city">
+                <i class="geo bi bi-geo-alt-fill"></i> Bandung
+              </li>
+            </ul>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aene...
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure tabindex="0" class="card">
+          <picture>
+            <source
+              class="lazyloaded"
+              media="(max-width: 600px)"
+              srcset="https://restaurant-api.dicoding.dev/images/medium/32" />
+            <img
+              class="img_card lazyloaded"
+              data-src="https://restaurant-api.dicoding.dev/images/large/32"
+              alt="Hub Grubber"
+              src="https://restaurant-api.dicoding.dev/images/large/32" />
+          </picture>
+
+          <figcaption class="caption">
+            <h1>
+              <a class="cta__restaurant" href="/#/detail/69ahsy71a5gkfw1e867"
+                >Hub Grubber</a
+              >
+            </h1>
+            <ul class="detail__card">
+              <li class="rate"><i class="star bi bi-star-fill"></i> 3.8</li>
+              <li class="city">
+                <i class="geo bi bi-geo-alt-fill"></i> Balikpapan
+              </li>
+            </ul>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aene...
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure tabindex="0" class="card">
+          <picture>
+            <source
+              class="lazyloaded"
+              media="(max-width: 600px)"
+              srcset="https://restaurant-api.dicoding.dev/images/medium/27" />
+            <img
+              class="img_card lazyloaded"
+              data-src="https://restaurant-api.dicoding.dev/images/large/27"
+              alt="Kafe Cemara"
+              src="https://restaurant-api.dicoding.dev/images/large/27" />
+          </picture>
+
+          <figcaption class="caption">
+            <h1>
+              <a class="cta__restaurant" href="/#/detail/ateyf7m737ekfw1e867"
+                >Kafe Cemara</a
+              >
+            </h1>
+            <ul class="detail__card">
+              <li class="rate"><i class="star bi bi-star-fill"></i> 3.6</li>
+              <li class="city">
+                <i class="geo bi bi-geo-alt-fill"></i> Ternate
+              </li>
+            </ul>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aene...
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure tabindex="0" class="card">
+          <picture>
+            <source
+              class="lazyloaded"
+              media="(max-width: 600px)"
+              srcset="https://restaurant-api.dicoding.dev/images/medium/21" />
+            <img
+              class="img_card lazyloaded"
+              data-src="https://restaurant-api.dicoding.dev/images/large/21"
+              alt="Manis Asam Kafe"
+              src="https://restaurant-api.dicoding.dev/images/large/21" />
+          </picture>
+
+          <figcaption class="caption">
+            <h1>
+              <a class="cta__restaurant" href="/#/detail/02hfwn4bh8uzkfw1e867"
+                >Manis Asam Kafe</a
+              >
+            </h1>
+            <ul class="detail__card">
+              <li class="rate"><i class="star bi bi-star-fill"></i> 4.6</li>
+              <li class="city">
+                <i class="geo bi bi-geo-alt-fill"></i> Malang
+              </li>
+            </ul>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aene...
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure tabindex="0" class="card">
+          <picture>
+            <source
+              class="lazyload"
+              media="(max-width: 600px)"
+              srcset="https://restaurant-api.dicoding.dev/images/medium/30" />
+            <img
+              class="img_card lazyload"
+              data-src="https://restaurant-api.dicoding.dev/images/large/30"
+              alt="Run The Gun" />
+          </picture>
+
+          <figcaption class="caption">
+            <h1>
+              <a class="cta__restaurant" href="/#/detail/p06p0wr8eedkfw1e867"
+                >Run The Gun</a
+              >
+            </h1>
+            <ul class="detail__card">
+              <li class="rate"><i class="star bi bi-star-fill"></i> 3.7</li>
+              <li class="city"><i class="geo bi bi-geo-alt-fill"></i> Aceh</li>
+            </ul>
+            <p class="desc">
+              But I must explain to you how all this mistaken idea of denouncing
+              pleasure and praising pain wa...
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure tabindex="0" class="card">
+          <picture>
+            <source
+              class="lazyload"
+              media="(max-width: 600px)"
+              srcset="https://restaurant-api.dicoding.dev/images/medium/19" />
+            <img
+              class="img_card lazyload"
+              data-src="https://restaurant-api.dicoding.dev/images/large/19"
+              alt="Bobby" />
+          </picture>
+
+          <figcaption class="caption">
+            <h1>
+              <a class="cta__restaurant" href="/#/detail/uqzwm2m981kfw1e867"
+                >Bobby</a
+              >
+            </h1>
+            <ul class="detail__card">
+              <li class="rate"><i class="star bi bi-star-fill"></i> 4.7</li>
+              <li class="city">
+                <i class="geo bi bi-geo-alt-fill"></i> Ternate
+              </li>
+            </ul>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aene...
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure tabindex="0" class="card">
+          <picture>
+            <source
+              class="lazyload"
+              media="(max-width: 600px)"
+              srcset="https://restaurant-api.dicoding.dev/images/medium/43" />
+            <img
+              class="img_card lazyload"
+              data-src="https://restaurant-api.dicoding.dev/images/large/43"
+              alt="Pangsit Express" />
+          </picture>
+
+          <figcaption class="caption">
+            <h1>
+              <a class="cta__restaurant" href="/#/detail/dy62fuwe6w8kfw1e867"
+                >Pangsit Express</a
+              >
+            </h1>
+            <ul class="detail__card">
+              <li class="rate"><i class="star bi bi-star-fill"></i> 4.8</li>
+              <li class="city">
+                <i class="geo bi bi-geo-alt-fill"></i> Surabaya
+              </li>
+            </ul>
+            <p class="desc">
+              Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+              Curabitur ullamcorper ultricie...
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure tabindex="0" class="card">
+          <picture>
+            <source
+              class="lazyload"
+              media="(max-width: 600px)"
+              srcset="https://restaurant-api.dicoding.dev/images/medium/04" />
+            <img
+              class="img_card lazyload"
+              data-src="https://restaurant-api.dicoding.dev/images/large/04"
+              alt="Gigitan Makro" />
+          </picture>
+
+          <figcaption class="caption">
+            <h1>
+              <a class="cta__restaurant" href="/#/detail/vfsqv0t48jkfw1e867"
+                >Gigitan Makro</a
+              >
+            </h1>
+            <ul class="detail__card">
+              <li class="rate"><i class="star bi bi-star-fill"></i> 4.9</li>
+              <li class="city">
+                <i class="geo bi bi-geo-alt-fill"></i> Surabaya
+              </li>
+            </ul>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aene...
+            </p>
+          </figcaption>
+        </figure>
+      </section>
     </main>
-    <!-- end::Main -->
-
-    <!-- start::Footer -->
-    <footer>
-      <div>
-        <h5>copyright &copy; 2020 - Wello Apps</h5>
-      </div>
-    </footer>
-    <!-- end::Footer -->
+    <the-footer>
+      <footer tabindex="0">
+        <p>Food Live © 2023</p>
+      </footer>
+    </the-footer>
   </body>
 </html>
