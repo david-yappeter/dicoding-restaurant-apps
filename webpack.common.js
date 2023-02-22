@@ -1,5 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -17,6 +19,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
+          MiniCssExtractPlugin.loader,
           {
             loader: 'style-loader',
           },
@@ -29,8 +32,9 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
-          // Creates `style` nodes from JS strings
-          'style-loader',
+          MiniCssExtractPlugin.loader,
+          // // Creates `style` nodes from JS strings
+          // 'style-loader',
           // Translates CSS into CommonJS
           'css-loader',
           // Compiles Sass to CSS
@@ -52,5 +56,13 @@ module.exports = {
         },
       ],
     }),
+
+    // Extract any CSS from any javascript file to process it as LESS/SASS using a loader
+    new MiniCssExtractPlugin({
+      filename: 'styles/[name].bundle.css',
+    }),
+
+    // Minify CSS assets
+    new CssMinimizerWebpackPlugin({}),
   ],
 };
