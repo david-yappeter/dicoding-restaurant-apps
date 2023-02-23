@@ -1,11 +1,15 @@
+import App from './views/app';
+
 const Initialize = () => {
-  document.querySelector('#navbar-toggler').addEventListener('click', () => {
-    document
-      .querySelector(this.getAttribute('data-target'))
-      .classList.toggle('active');
+  const app = new App({
+    button: document.querySelector('#navbar-toggler'),
+    drawer: document.querySelector(
+      document.querySelector('#navbar-toggler').getAttribute('data-target')
+    ),
+    content: document.querySelector('#nav-list'),
   });
 };
 
-module.exports = {
+export default {
   Initialize,
 };

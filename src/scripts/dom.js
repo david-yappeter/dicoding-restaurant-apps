@@ -1,4 +1,4 @@
-const { Initialize } = require('./initialize');
+const { Initialize } = require('./initialize').default;
 const datas = require('../public/datas/DATA.json').restaurants;
 
 document.addEventListener('DOMContentLoaded', () => {
