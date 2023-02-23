@@ -1,7 +1,7 @@
 const { Initialize } = require('./initialize');
 const datas = require('../public/datas/DATA.json').restaurants;
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   Initialize();
 
   datas.forEach((data) => {
