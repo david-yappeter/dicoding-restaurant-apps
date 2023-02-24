@@ -3,11 +3,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+// const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
   entry: {
     app: path.resolve(__dirname, 'src/scripts/index.js'),
-    // sw: path.resolve(__dirname, 'src/scripts/sw.js'),
+    sw: path.resolve(__dirname, 'src/scripts/sw.js'),
   },
   output: {
     filename: '[name].bundle.js',
@@ -64,5 +65,13 @@ module.exports = {
 
     // Minify CSS assets
     new CssMinimizerWebpackPlugin({}),
+
+    // // Workbox
+    // new WorkboxPlugin.GenerateSW({
+    //   // these options encourage the ServiceWorkers to get in there fast
+    //   // and not allow any straggling "old" SWs to hang around
+    //   clientsClaim: true,
+    //   skipWaiting: true,
+    // }),
   ],
 };

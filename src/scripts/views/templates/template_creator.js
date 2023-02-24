@@ -16,7 +16,9 @@ const createRestaurantListTemplate = (restaurant) => `
       </div>
       <p>${restaurant.city}</p>
     <h1 class="card-title">
-      <a class="restaurant-name" href="#">${restaurant.name}</a>
+      <a class="restaurant-name" href="#/detail/${restaurant.id}">${
+  restaurant.name
+}</a>
     </h1>
     <p class="card-desc">
       ${restaurant.description}
@@ -25,4 +27,30 @@ const createRestaurantListTemplate = (restaurant) => `
 </div>
 `;
 
-export { createRestaurantListTemplate };
+const createRestaurantDetailTemplate = (restaurant) => `
+<img class="" src="${CONFIG.BASE_IMAGE_URL_MEDIUM}${restaurant.pictureId}" alt="${restaurant.name}" />
+<h2 class="restaurant-name">${restaurant.name}</h2>
+<h3 class="restaurant-location">${restaurant.address}</h3>
+<h3 class="restaurant-start">${restaurant.rating}</h3>
+<p class="restaurant-description">${restaurant.description}</p>
+<div class="restaurant-categories">
+  <h4>Kategori</h4>
+  <ul class="restaurant-categories-list">
+  </ul>
+</div>
+<div class="restaurant-menus">
+  <h4>Menu Makanan</h4>
+  <ul class="restaurant-menus-list">
+  </ul>
+</div>
+<section class="restaurant-review-box">
+  <h2>Tambah review</h2>
+</section>
+<article id="restaurant-reviews">
+  <h3>Review</h3>
+  <ul>
+  <ul>
+</article>
+`;
+
+export { createRestaurantListTemplate, createRestaurantDetailTemplate };

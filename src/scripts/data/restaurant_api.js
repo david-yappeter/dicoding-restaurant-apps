@@ -7,11 +7,11 @@ class RestaurantAPI {
     return responseJson;
   }
 
-  // static async get(id) {
-  //   const response = await fetch(API_ENDPOINT.get);
-  //   const responseJson = await response.json();
-  //   return responseJson.results();
-  // }
+  static async get(id) {
+    const response = await fetch(API_ENDPOINT.get(id));
+    const responseJson = await response.json();
+    return responseJson;
+  }
 }
 
 export default RestaurantAPI;

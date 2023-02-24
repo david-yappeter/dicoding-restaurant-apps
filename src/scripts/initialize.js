@@ -1,3 +1,4 @@
+import swRegister from './utils/sw_register';
 import App from './views/app';
 
 const Initialize = () => {
@@ -14,6 +15,7 @@ const Initialize = () => {
   });
   window.addEventListener('load', () => {
     app.renderPage();
+    swRegister();
   });
 };
 
