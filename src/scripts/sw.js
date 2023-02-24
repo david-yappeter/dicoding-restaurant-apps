@@ -1,7 +1,5 @@
 import CacheHelper from './utils/cache_helper';
 
-const version = '1.0.0';
-// const CACHE_NAME = `mypwa-${version}`;
 const assetsToCache = [
   '/',
   '/icons/icon-72x72.png',

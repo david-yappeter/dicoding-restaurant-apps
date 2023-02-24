@@ -87,6 +87,20 @@ const createRestaurantDetailTemplate = (restaurant) => `
       .join('')}
     </ul>
   </div>
+  <div id="add-review">
+      <h2>Tambahkan Review Kamu </h2>
+      <form id="add-review-form">
+        <div class="form-control">
+          <label for="ipt-name">Nama</label>
+          <input required id="ipt-name" name="name" placeholder="Nama" />
+        </div>
+        <div class="form-control">
+          <label for="ipt-review">Review</label>
+          <textarea require row="4" id="ipt-review" name="review" placeholder="Review"></textarea>
+        </div>
+        <button class="btn bg-primary" type="submit"  id="btn-sbt">Tambahkan</button>
+      </form>
+  </div>
   <article id="restaurant-reviews">
     <h2>Review</h2>
     <ul>
@@ -108,9 +122,23 @@ const createLikedButtonTemplate = () => `
   </button>
 `;
 
+const loading = {
+  show() {
+    return `
+      <div class="box">
+        <div class="loader"></div>
+      </div>
+    `;
+  },
+  hide() {
+    document.querySelector('.box').remove();
+  },
+};
+
 export {
   createRestaurantListTemplate,
   createRestaurantDetailTemplate,
   createLikeButtonTemplate,
   createLikedButtonTemplate,
+  loading,
 };
