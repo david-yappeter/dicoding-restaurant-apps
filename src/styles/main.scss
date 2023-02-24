@@ -21,6 +21,7 @@ $red-light: #ff5d5d;
 html, body {
 	background-color: $gray;
 	scroll-behavior: smooth;
+	min-height: 100vh;
 }
 
 body{

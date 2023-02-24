@@ -13,7 +13,11 @@
     "rules": {
         "import/prefer-default-export": 0,
         "import/no-extraneous-dependencies": 0,
+        "linebreak-style": 0,
+        "object-shorthand": 0,
         "comma-dangle": 0,
+        "arrow-body-style": 0,
+        "indent": 0,
         "implicit-arrow-linebreak": 0,
         "operator-linebreak": 0,
         "no-restricted-globals": 0,
