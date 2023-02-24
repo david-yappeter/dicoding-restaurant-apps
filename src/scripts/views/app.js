@@ -15,7 +15,6 @@ class App {
     DrawerInitiator.init({
       button: this._button,
       drawer: this._drawer,
-      content: this._content,
     });
   }
 

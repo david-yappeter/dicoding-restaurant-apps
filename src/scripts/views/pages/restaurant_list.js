@@ -1,5 +1,5 @@
 import RestaurantAPI from '../../data/restaurant_api';
-import CONFIG from '../../globals/config';
+import { createRestaurantListTemplate } from '../templates/template_creator';
 
 const RestaurantList = {
   async render() {
@@ -18,33 +18,8 @@ const RestaurantList = {
     const { restaurants } = response;
 
     restaurants.forEach((restaurant) => {
-      const card = document.createElement('div');
-      card.classList.add('card');
-
-      card.innerHTML = `
-    <picture>
-      <img
-        class="card-image"
-        alt="${restaurant.name}"
-        src="${CONFIG.BASE_IMAGE_URL_SMALL(restaurant.pictureId)}" />
-    </picture>
-
-    <div class="caption">
-      <div class="rate">
-        <i class="fa-solid fa-star"></i>
-        <span>${restaurant.rating}</span>
-        </div>
-        <p>${restaurant.city}</p>
-      <h1 class="card-title">
-        <a class="restaurant-name" href="#">${restaurant.name}</a>
-      </h1>
-      <p class="card-desc">
-        ${restaurant.description}
-      </p>
-    </div>
-    `;
-
-      document.querySelector('section.restaurants').appendChild(card);
+      document.querySelector('section.restaurants').innerHTML +=
+        createRestaurantListTemplate(restaurant);
     });
   },
 };

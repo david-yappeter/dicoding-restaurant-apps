@@ -6,7 +6,6 @@ const Initialize = () => {
     drawer: document.querySelector(
       document.querySelector('#navbar-toggler').getAttribute('data-target')
     ),
-    // content: document.querySelector('#nav-list'),
     content: document.querySelector('#content'),
   });
 
