@@ -7,7 +7,7 @@
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint ./src",
-    "test": "karma start"
+    "test": "karma start --single-run=true"
   },
   "keywords": [],
   "author": "your_name <your.email@domain.com>",
