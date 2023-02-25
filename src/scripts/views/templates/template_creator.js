@@ -116,7 +116,7 @@ const createLikeButtonTemplate = () => `
   </button>
 `;
 
-const createLikedButtonTemplate = () => `
+const createUnlikeButtonTemplate = () => `
   <button aria-label="unlike this restaurant" id="like-btn" class="like">
     <i class="fa-solid fa-heart" aria-hidden="true"></i>
   </button>
@@ -139,6 +139,6 @@ export {
   createRestaurantListTemplate,
   createRestaurantDetailTemplate,
   createLikeButtonTemplate,
-  createLikedButtonTemplate,
+  createUnlikeButtonTemplate,
   loading,
 };
