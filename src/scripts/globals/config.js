@@ -7,8 +7,8 @@ const CONFIG = {
     `https://restaurant-api.dicoding.dev/images/medium/${id}`,
   BASE_IMAGE_URL_LARGE: (id) =>
     `https://restaurant-api.dicoding.dev/images/large/${id}`,
-  CACHE_NAME: new Date().toISOString(),
-  // CACHE_NAME: 'restaurant-app-cache-key',
+  // CACHE_NAME: new Date().toISOString(),
+  CACHE_NAME: 'restaurant-app-cache-key',
   DATABASE_NAME: 'restaurant-catalogue-db',
   DATABASE_VERSION: 1,
   OBJECT_STORE_NAME: 'restaurant',

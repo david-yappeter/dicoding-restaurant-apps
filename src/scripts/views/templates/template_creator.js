@@ -37,10 +37,10 @@ const createBadge = (text, className) => {
 
 const createReview = (review) => {
   return `
-    <li class="card review-box">
+    <li tabindex=0  class="card review-box">
       <p>${review.date}</p>
       <div class="flex justify-start align-center">
-      <img class="profile-pic" alt="${review.name}" src="/images/anon.webp" />
+      <img class="profile-pic" alt="${review.name}" src="./images/anon.webp" />
         <p class="font-bold ml-10px">${review.name}</p>
       </div>
       <p>${review.review}</p>
@@ -50,7 +50,7 @@ const createReview = (review) => {
 
 const createRestaurantDetailTemplate = (restaurant) => `
 <div id="restaurant-detail" class="card">
-  <img class="restaurant-detail-img" src="${CONFIG.BASE_IMAGE_URL_MEDIUM(
+  <img tabindex=0 class="restaurant-detail-img" src="${CONFIG.BASE_IMAGE_URL_MEDIUM(
     restaurant.pictureId
   )}" alt="${restaurant.name}" />
   <div class="restaurant-rate">
@@ -61,9 +61,9 @@ const createRestaurantDetailTemplate = (restaurant) => `
     <i class="fa-solid fa-map-pin"></i>
     <span>${restaurant.address}</span>
   </div>
-  <h2 class="restaurant-name">${restaurant.name}</h2>
+  <h2 tabindex=0 class="restaurant-name">${restaurant.name}</h2>
   <p class="restaurant-description">${restaurant.description}</p>
-  <div class="restaurant-categories">
+  <div tabindex=0 class="restaurant-categories">
     <h4>Kategori</h4>
     <ul class="restaurant-list">
     ${restaurant.categories
@@ -71,7 +71,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
       .join('')}
     </ul>
   </div>
-  <div class="restaurant-menus">
+  <div tabindex=0 class="restaurant-menus">
     <h4>Menu Makanan</h4>
     <ul class="restaurant-list">
     ${restaurant.menus.foods
@@ -79,7 +79,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
       .join('')}
     </ul>
     </div>
-    <div class="restaurant-menus">
+  <div class="restaurant-menus">
     <h4>Menu Minuman</h4>
     <ul class="restaurant-list">
     ${restaurant.menus.drinks
@@ -101,7 +101,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
         <button class="btn bg-primary" type="submit"  id="btn-sbt">Tambahkan</button>
       </form>
   </div>
-  <article id="restaurant-reviews">
+  <article tabindex=0 id="restaurant-reviews">
     <h2>Review</h2>
     <ul>
     ${restaurant.customerReviews.map((review) => createReview(review)).join('')}
