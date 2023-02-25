@@ -79,7 +79,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
       .join('')}
     </ul>
     </div>
-  <div class="restaurant-menus">
+  <div tabindex=0  class="restaurant-menus">
     <h4>Menu Minuman</h4>
     <ul class="restaurant-list">
     ${restaurant.menus.drinks

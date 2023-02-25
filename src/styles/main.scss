@@ -38,8 +38,15 @@ button, a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-width: 44px;
-	min-height: 44px;
+}
+
+button,a ,input,textarea,  *[tabindex]{
+	min-width: 45px;
+	min-height: 45px;
+}
+
+input, textarea {
+	font-size: 16px;
 }
 
 ul {
@@ -66,7 +73,6 @@ a,
 span,
 input,
 button,
-input,
 label,
 textarea,
 .body1 {
