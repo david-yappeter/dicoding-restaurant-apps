@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
+const RunNodeWebpackPlugin = require('run-node-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -43,6 +44,18 @@ module.exports = {
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         type: 'asset',
+      },
+      {
+        test: /\.(jpe?g)/i,
+        use: [
+          'file-loader',
+          {
+            loader: 'webpack-sharp-loader',
+            options: {
+              processFunction: (sharp) => sharp.negate(),
+            },
+          },
+        ],
       },
       {
         test: /\.css$/,
@@ -93,5 +106,7 @@ module.exports = {
         }),
       ],
     }),
+    // run sharp.js
+    new RunNodeWebpackPlugin({ scriptToRun: './sharp.js' }),
   ],
 };
