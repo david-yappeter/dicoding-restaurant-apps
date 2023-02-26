@@ -6,8 +6,8 @@ const RestaurantList = {
     return `
     <div id="landing-container">
       <picture class="hero-picture">
-        <source media="(max-width: 700px)" type="image/jpeg" srcset="./images/heros/hero-image_1-small.jpg" />
-        <source media="(min-width: 701px)" type="image/jpeg" srcset="./images/heros/hero-image_4-large.jpg" />
+        <source media="(max-width: 700px)" type="image/jpeg" data-srcset="./images/heros/hero-image_1-small.jpg" />
+        <source media="(min-width: 701px)" type="image/jpeg" data-srcset="./images/heros/hero-image_4-large.jpg" />
         <img class="lazyload hero-image" alt="hero" data-src="./images/heros/hero-image_4.jpg" />
         
       </picture>

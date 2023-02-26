@@ -5,7 +5,7 @@ const createRestaurantListTemplate = (restaurant) => `
   <picture>
       <source
         media="(max-width: 700px)"
-        srcset="${CONFIG.BASE_IMAGE_URL_SMALL(restaurant.pictureId)}"
+        data-srcset="${CONFIG.BASE_IMAGE_URL_SMALL(restaurant.pictureId)}"
         type="image/jpeg"
         class="card-image"
         alt="${restaurant.name}"/>
