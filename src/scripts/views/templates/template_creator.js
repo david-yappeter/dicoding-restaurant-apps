@@ -3,10 +3,16 @@ const CONFIG = require('../../globals/config');
 const createRestaurantListTemplate = (restaurant) => `
 <div class="restaurant-container card">
   <picture>
+      <source
+        media="(max-width: 700px)"
+        srcset="${CONFIG.BASE_IMAGE_URL_SMALL(restaurant.pictureId)}"
+        type="image/jpeg"
+        class="card-image"
+        alt="${restaurant.name}"/>
       <img
         class="card-image"
         alt="${restaurant.name}"
-        src="${CONFIG.BASE_IMAGE_URL_SMALL(restaurant.pictureId)}" />
+        src="${CONFIG.BASE_IMAGE_URL_LARGE(restaurant.pictureId)}" />
     </picture>
 
   <div class="caption">

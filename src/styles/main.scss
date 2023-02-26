@@ -174,7 +174,8 @@ main{
 
 /*hero*/
 #landing-container {
-	background: url("../public/images/heros/hero-image_1.jpg");
+	position: relative;
+	// background: url("../public/images/heros/hero-image_1.jpg");
 	background-size:cover;
 	background-position: center;
 	box-shadow:inset 0 0 0 2000px rgba(000, 0, 000, 0.3);
@@ -194,6 +195,25 @@ main{
 		font-weight: 400;
 		padding: 0 10px;
 	}
+}
+
+.hero-picture {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.hero-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 50% 0;
+}
+
+.z-10 {
+	z-index: 10;
 }
 
 /*Catalogs*/
@@ -502,7 +522,7 @@ input,textarea  {
 	}
 	/*Hero*/
 	#landing-container{
-		background: url("../public/images/heros/hero-image_4.jpg");
+		// background: url("../public/images/heros/hero-image_4.jpg");
 		background-size: cover;
 	}
 	#landing-container h1{

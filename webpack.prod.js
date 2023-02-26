@@ -1,5 +1,6 @@
-const common = require('./webpack.common');
 const { merge } = require('webpack-merge');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const common = require('./webpack.common');
 
 module.exports = merge(common, {
   mode: 'production',
@@ -20,4 +21,17 @@ module.exports = merge(common, {
       },
     ],
   },
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'src/public/'),
+          to: path.resolve(__dirname, 'dist/'),
+          // globOptions: {
+          //   ignore: ['**/images/**'],
+          // },
+        },
+      ],
+    }),
+  ],
 });

@@ -5,8 +5,14 @@ const RestaurantList = {
   async render() {
     return `
     <div id="landing-container">
-      <h1 tabindex="0">Welcome to Wello</h1>
-      <a href="#find" class="btn">Take A Tour</a>
+      <picture class="hero-picture">
+        <source media="(max-width: 700px)" type="image/jpeg" srcset="./images/heros/hero-image_1-small.jpg" />
+        <source media="(min-width: 701px)" type="image/jpeg" srcset="./images/heros/hero-image_4-large.jpg" />
+        <img class="hero-image" alt="hero" src="./images/heros/hero-image_4.jpg" />
+        
+      </picture>
+      <h1 class="z-10" tabindex="0">Welcome to Wello</h1>
+      <a href="#find" class="z-10 btn">Take A Tour</a>
     </div>
     <h1 tabindex="0" id="find" class="title">Find Nearby Restaurants</h1>
     <section class="restaurants"></section>
