@@ -8,7 +8,7 @@ const RestaurantList = {
       <picture class="hero-picture">
         <source media="(max-width: 700px)" type="image/jpeg" srcset="./images/heros/hero-image_1-small.jpg" />
         <source media="(min-width: 701px)" type="image/jpeg" srcset="./images/heros/hero-image_4-large.jpg" />
-        <img class="hero-image" alt="hero" src="./images/heros/hero-image_4.jpg" />
+        <img class="lazyload hero-image" alt="hero" src="./images/heros/hero-image_4.jpg" />
         
       </picture>
       <h1 class="z-10" tabindex="0">Welcome to Wello</h1>

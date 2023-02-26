@@ -13,7 +13,7 @@ const FavouriteRestaurant = {
     </section>
     <div class="mx-10px flex justify-center items-center flex-col">
       <h2 class="restaurant-item__not__found text-center">Kamu belum menambahkan restoran favoritmu</h2>
-      <img class="no-data-img" alt="no data" src="./images/no-data.webp" />
+      <img class="lazyload no-data-img" alt="no data" src="./images/no-data.webp" />
       <a href="#/" class="btn bg-primary">Kembali ke beranda</a>
     </div>
     `;

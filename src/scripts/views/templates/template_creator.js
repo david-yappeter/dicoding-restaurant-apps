@@ -10,7 +10,7 @@ const createRestaurantListTemplate = (restaurant) => `
         class="card-image"
         alt="${restaurant.name}"/>
       <img
-        class="card-image"
+        class="lazyload card-image"
         alt="${restaurant.name}"
         src="${CONFIG.BASE_IMAGE_URL_LARGE(restaurant.pictureId)}" />
     </picture>
@@ -46,7 +46,7 @@ const createReview = (review) => {
     <li tabindex=0  class="card review-box">
       <p>${review.date}</p>
       <div class="flex justify-start align-center">
-      <img class="profile-pic" alt="${review.name}" src="./images/anon.webp" />
+      <img class="lazyload profile-pic" alt="${review.name}" src="./images/anon.webp" />
         <p class="font-bold ml-10px">${review.name}</p>
       </div>
       <p>${review.review}</p>
@@ -56,7 +56,7 @@ const createReview = (review) => {
 
 const createRestaurantDetailTemplate = (restaurant) => `
 <div id="restaurant-detail" class="card">
-  <img tabindex=0 class="restaurant-detail-img" src="${CONFIG.BASE_IMAGE_URL_MEDIUM(
+  <img tabindex=0 class="lazyload restaurant-detail-img" src="${CONFIG.BASE_IMAGE_URL_MEDIUM(
     restaurant.pictureId
   )}" alt="${restaurant.name}" />
   <div class="restaurant-rate">
