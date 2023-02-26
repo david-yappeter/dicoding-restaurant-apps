@@ -3,7 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-// const WorkboxPlugin = require('workbox-webpack-plugin');
+const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
+const ImageminMozjpeg = require('imagemin-mozjpeg');
+const ImageminPngQuant = require('imagemin-pngquant');
 
 module.exports = {
   entry: {
@@ -17,6 +19,10 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        type: 'asset',
+      },
       {
         test: /\.css$/,
         use: [
@@ -66,12 +72,17 @@ module.exports = {
     // Minify CSS assets
     new CssMinimizerWebpackPlugin({}),
 
-    // // Workbox
-    // new WorkboxPlugin.GenerateSW({
-    //   // these options encourage the ServiceWorkers to get in there fast
-    //   // and not allow any straggling "old" SWs to hang around
-    //   clientsClaim: true,
-    //   skipWaiting: true,
-    // }),
+    new ImageminWebpackPlugin({
+      plugins: [
+        ImageminMozjpeg({
+          quality: 50,
+          progressive: true,
+        }),
+        // ImageminPngQuant({
+        //   quality: [50],
+        //   progressive: true,
+        // }),
+      ],
+    }),
   ],
 };
