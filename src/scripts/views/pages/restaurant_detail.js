@@ -1,3 +1,4 @@
+import FavouriteRestaurantIdb from '../../data/favorite_restaurant_idb';
 import RestaurantAPI from '../../data/restaurant_api';
 import UrlParser from '../../routes/url_parser';
 import LikeButtonInitiator from '../../utils/like_button_initiator';
@@ -13,7 +14,7 @@ const RestaurantDetail = {
     <div id="restaurant-detail-container">
       ${loading.show()}
     </div>
-    <div id="like-btn"></div>
+    <div id="like-btn-container"></div>
     `;
   },
   async afterRender() {
@@ -43,12 +44,13 @@ const RestaurantDetail = {
         });
       });
 
-    const likeButtonContainer = document.querySelector('#like-btn');
+    const likeButtonContainer = document.querySelector('#like-btn-container');
     LikeButtonInitiator.init({
       likeButtonContainer: likeButtonContainer,
       restaurant: {
         ...restaurant,
       },
+      favouriteRestaurantIdb: FavouriteRestaurantIdb,
     });
   },
 };

@@ -1,4 +1,4 @@
-const { Initialize } = require('./initialize').default;
+import Initialize from './initialize';
 
 document.addEventListener('DOMContentLoaded', () => {
   Initialize();

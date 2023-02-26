@@ -1,7 +1,7 @@
-import CONFIG from '../../globals/config';
+const CONFIG = require('../../globals/config');
 
 const createRestaurantListTemplate = (restaurant) => `
-<div class="card">
+<div class="restaurant-container card">
   <picture>
       <img
         class="card-image"

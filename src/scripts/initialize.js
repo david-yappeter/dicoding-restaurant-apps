@@ -24,6 +24,4 @@ const Initialize = () => {
   });
 };
 
-export default {
-  Initialize,
-};
+export default Initialize;

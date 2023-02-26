@@ -1,4 +1,4 @@
-import CONFIG from '../globals/config';
+const CONFIG = require('../globals/config');
 
 const CacheHelper = {
   async cachingAppShell(requests) {
@@ -44,4 +44,4 @@ const CacheHelper = {
   },
 };
 
-export default CacheHelper;
+module.exports = CacheHelper;

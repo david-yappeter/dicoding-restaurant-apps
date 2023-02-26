@@ -1,4 +1,4 @@
-import CacheHelper from './utils/cache_helper';
+const CacheHelper = require('./utils/cache_helper');
 
 const assetsToCache = [
   '/',

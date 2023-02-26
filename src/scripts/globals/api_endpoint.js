@@ -1,4 +1,4 @@
-import CONFIG from './config';
+const CONFIG = require('./config');
 
 const API_ENDPOINT = {
   fetch: `${CONFIG.BASE_URL}list`,
