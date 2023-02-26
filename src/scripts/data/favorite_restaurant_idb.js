@@ -1,4 +1,5 @@
 import { openDB } from 'idb';
+
 const CONFIG = require('../globals/config');
 
 const { DATABASE_NAME, DATABASE_VERSION, OBJECT_STORE_NAME } = CONFIG;
