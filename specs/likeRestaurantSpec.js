@@ -26,7 +26,7 @@ describe('Like a restaurant', () => {
     ).toBeFalsy();
   });
 
-  it('should be able to like the movie', async () => {
+  it('should be able to like the restaurant', async () => {
     await TestFactories.createLikeButtonPresenterWithRestaurant({ id: 1 });
 
     document.querySelector('#like-btn').dispatchEvent(new Event('click'));
